@@ -1,0 +1,42 @@
+class EckenZeichnen {
+   static void zeichne() {
+      Turtle turtle = new Turtle(800, 600);
+      turtle.showTurtle(true);
+      turtle.moveTo(400, 300);
+
+      int ecken = 27;
+      int seitenlaenge = 50;
+      for(int i = 0; i < ecken; i++) {
+         turtle.forward(seitenlaenge);
+         turtle.turn(360 / ecken);
+      }
+      turtle.forward(seitenlaenge);
+
+      
+   }
+
+   static void zeichneHausVomNikolaus() {
+      Turtle turtle = new Turtle(800, 600);
+      turtle.showTurtle(true);
+      turtle.moveTo(400, 300);
+
+      turtle.forward(-100);
+      turtle.turn(90);
+      turtle.forward(100);
+      turtle.turn(-135);
+      double schraege = (Math.sqrt((100.0 * 100.0) + (100.0 * 100.0)));
+      turtle.forward(schraege);
+      turtle.turn(135);
+      turtle.forward(100);
+      turtle.turn(90);
+      turtle.forward(100);
+      turtle.turn(225);
+      turtle.forward(75);
+      turtle.turn(-90);
+      turtle.forward(75);
+      turtle.turn(-90);
+      turtle.forward(schraege);
+   }
+}
+
+EckenZeichnen.zeichneHausVomNikolaus();
